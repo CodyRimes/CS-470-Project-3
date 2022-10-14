@@ -22,7 +22,7 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div className="App" style={{height:'100vh'}}>
 
 
 
@@ -31,14 +31,21 @@ function App() {
                 border: 2,
                 borderRadius: 1,
                 width: 1,
-                height: '100vh'
+                justifyContent:"center",
+                alignItems:"stretch",
+                direction:"column"
             }} >
-            <Grid item xs={12}>
-                <Typography>
-                    My big huge grid
+            <Grid item xs={6} sx={{
+            }}>
+                <Typography component='span' variant='h1'>
+                    Welcome to Pentago Kooshesh
                 </Typography>
             </Grid>
-            <Board SubGridNames={SubGridNames}/>
+            <Grid container item xs={12}>
+                {/*Potentially another grid item here with size xs={1} here maybe?? to contain text*/}
+                <Board SubGridNames={SubGridNames}/>
+            </Grid>
+
         </Grid>
 
 
